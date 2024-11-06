@@ -4,6 +4,7 @@ from aiogram import (
 )  # Импортирую бота, диспетчера, Ф-магический фильтр, благоря нему можно получать любые сообщения от пользователя.
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message
+import app.keyboards as kb
 
 router = (
     Router()
@@ -15,7 +16,8 @@ router = (
 async def cmd_start(message: Message):
     # Метод реплай это именно ответ на отправленное сообщение, т.е в содержании будет указано первое сообщение, в отличии от ансвер
     await message.reply(
-        f"Привет! Я ответил!\nТвой ID: {message.from_user.id}\nИмя: {message.from_user.first_name}"
+        f"Привет! Я ответил!\nТвой ID: {message.from_user.id}\nИмя: {message.from_user.first_name}",
+        reply_markup=kb.settings,
     )
 
 
