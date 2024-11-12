@@ -12,16 +12,21 @@ from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder
 # создаем кнопки клавитуры с помошью реплай кейборд
 # resize_keyboard=True Меняем размер клавиатуры до минимального значения
 # input_field_placeholder вместо  подсказки значения(write a message)
-# main = ReplyKeyboardMarkup(
-#    keyboard=[
-#       [KeyboardButton(text="Первокурсникам"), KeyboardButton(text="Режим работы")],
-#       [KeyboardButton(text="Получить читательский")],
-#   ],
-#   resize_keyboard=True,
-#   input_field_placeholder="Выберите пункт меню",
-# )
+main = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Первокурсникам"), KeyboardButton(text="Режим работы")],
+        [KeyboardButton(text="Получить читательский")],
+        [KeyboardButton(text="Активности"), KeyboardButton(text="Услуги")],
+        [KeyboardButton(text="Языковые клубы"), KeyboardButton(text="Печатные книги")],
+        [KeyboardButton(text="Электронные ресурсы")],
+        [KeyboardButton(text="Мне нужна помощь")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите пункт меню",
+)
 
-main = InlineKeyboardMarkup(
+#клавиатура для инлайнов
+""" main = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Первокурсникам", callback_data="firstcourse")],
         [
@@ -31,7 +36,7 @@ main = InlineKeyboardMarkup(
             ),
         ],
     ]
-)
+) """
 
 settings = InlineKeyboardMarkup(
     inline_keyboard=[
