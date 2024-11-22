@@ -25,7 +25,19 @@ main = ReplyKeyboardMarkup(
     input_field_placeholder="Выберите пункт меню",
 )
 
-#клавиатура для инлайнов
+firstcourse = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="График выдачи учебной литературы")],
+        [KeyboardButton(text="О библиотеке")],
+        [KeyboardButton(text='Мобильное приложение "Научка"')],
+        [KeyboardButton(text="Книжная полка первокурсника")],
+        [KeyboardButton(text="Получить читательский")],
+        [KeyboardButton(text="Назад")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите пункт меню",
+)
+# клавиатура для инлайнов
 """ main = InlineKeyboardMarkup(
     inline_keyboard=[
         [InlineKeyboardButton(text="Первокурсникам", callback_data="firstcourse")],

@@ -52,6 +52,14 @@ async def how_are_you(message: Message):
     await message.answer("Спасибо, что спрашиваешь, у меня все отлично!")
 
 
+@router.message(F.text == "Первокурсникам")
+async def firstcourse(message: Message):
+    await message.reply(
+        f"Погрузим тебя в атмосферу библиотеки в твои первые дни учебы это работает",
+        reply_markup=kb.firstcourse,
+    )
+
+
 # Отправляем пользователю картинку если знаем айти, или загружаем по ссылке отправляем по команде /get_photo
 @router.message(Command("get_photo"))
 async def get_photo(message: Message):
