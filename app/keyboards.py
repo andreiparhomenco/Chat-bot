@@ -19,7 +19,6 @@ main = ReplyKeyboardMarkup(
         [KeyboardButton(text="Активности"), KeyboardButton(text="Услуги")],
         [KeyboardButton(text="Языковые клубы"), KeyboardButton(text="Печатные книги")],
         [KeyboardButton(text="Электронные ресурсы")],
-        [KeyboardButton(text="Мне нужна помощь")],
     ],
     resize_keyboard=True,
     input_field_placeholder="Выберите пункт меню",
@@ -35,7 +34,7 @@ firstcourse = ReplyKeyboardMarkup(
         [KeyboardButton(text="Меню")],
     ],
     resize_keyboard=True,
-    input_field_placeholder="Выберите пункт меню",
+    input_field_placeholder="Выберите что интересует",
 )
 # Клавиатура получить читательский
 get_reader_card = ReplyKeyboardMarkup(
@@ -46,7 +45,7 @@ get_reader_card = ReplyKeyboardMarkup(
         [KeyboardButton(text="Меню")],
     ],
     resize_keyboard=True,
-    input_field_placeholder="Выберите пункт меню",
+    input_field_placeholder="Выберите роль",
 )
 # Клавиатура активности
 activnosti = ReplyKeyboardMarkup(
@@ -59,7 +58,7 @@ activnosti = ReplyKeyboardMarkup(
         [KeyboardButton(text="Меню")],
     ],
     resize_keyboard=True,
-    input_field_placeholder="Выберите пункт меню",
+    input_field_placeholder="Выберите активность",
 )
 
 kvesty = ReplyKeyboardMarkup(
@@ -74,13 +73,158 @@ kvesty = ReplyKeyboardMarkup(
 
 podkast = ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text='Как это было')],
-        [KeyboardButton(text='Библиомаршрут')],
-        [KeyboardButton(text='Фронтиспис: Кабинет Пушкинского')],
+        [KeyboardButton(text="Как это было")],
+        [KeyboardButton(text="Библиомаршрут")],
+        [KeyboardButton(text="Фронтиспис: Кабинет Пушкинского")],
         [KeyboardButton(text="Меню")],
     ],
     resize_keyboard=True,
-    input_field_placeholder="Выберите квест",
+    input_field_placeholder="Выберите подкаст",
+)
+
+language_clubs = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="Английский"),
+            KeyboardButton(text="Арабский"),
+            KeyboardButton(text="Немецкий"),
+        ],
+        [
+            KeyboardButton(text="Русский"),
+            KeyboardButton(text="Испанский"),
+            KeyboardButton(text="Китайский"),
+        ],
+        [KeyboardButton(text="Французский"), KeyboardButton(text="Итальянский")],
+        [KeyboardButton(text="Индонезийский"), KeyboardButton(text="Монгольский")],
+        [
+            KeyboardButton(text="Бенгальский"),
+            KeyboardButton(text="ComPass"),
+            KeyboardButton(text="Speak Dating"),
+        ],
+        [KeyboardButton(text="Международный клуб игр")],
+        [KeyboardButton(text="Меню")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите Языковой клуб",
+)
+
+el_resourses = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Электронный каталог")],
+        [KeyboardButton(text="Электронная библиотека")],
+        [KeyboardButton(text="PRO Сибирь")],
+        [KeyboardButton(text="Удаленный доступ")],
+        [KeyboardButton(text="Базы данных")],
+        [KeyboardButton(text="Меню")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите электронный ресурс'",
+)
+
+# Клавиатура Услуг
+servises = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Бронирование аудиторий")],
+        [KeyboardButton(text="Оформление работ"), KeyboardButton(text="Антиплагиат")],
+        [KeyboardButton(text="Ксерокопия, распечатка")],
+        [KeyboardButton(text="Заказать книгу, статью из НБ")],
+        [KeyboardButton(text="Заказать литературу из других библиотек")],
+        [KeyboardButton(text="Ноутбуки напрокат"), KeyboardButton(text="УДК и ББК")],
+        [KeyboardButton(text="Фотосессия в библиотеке")],
+        [KeyboardButton(text="Меню")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите услугу",
+)
+
+# Клавиатура Бронирование аудиторий
+booking = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Забронировать")],
+        [KeyboardButton(text="Помещения и оборудование")],
+        [KeyboardButton(text="Сторонним посетителям")],
+        [KeyboardButton(text="Меню")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите пункт",
+)
+
+# Клавиатура забронировать
+booking_now = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(
+                text="AppStore",
+                url="https://clck.ru/XWuPS",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="GooglePlay ",
+                url="https://play.google.com/store/apps/details?id=com.tsu.bible",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Бронь конференц-залов",
+                url="https://it.tsu.ru/index.php/konferents-zaly-rezervirovanie",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="Бронь помещений",
+                url="https://www.lib.tsu.ru/ru/meropriyatiya-v-nauchnoy-biblioteke",
+            )
+        ],
+    ]
+)
+
+
+form_order = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(
+                text="Оформить список литературы",
+                url="http://service.lib.tsu.ru/digital-services-start",
+            )
+        ],
+    ]
+)
+
+
+form_work = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Гост"), KeyboardButton(text="Консультация")],
+        [KeyboardButton(text="Заказать оформление")],
+        [KeyboardButton(text="Меню")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите пункт",
+)
+
+
+printed_books = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Найти книгу"), KeyboardButton(text="Заказать книгу")],
+        [KeyboardButton(text="Брать книги на дом")],
+        [KeyboardButton(text="Продлить книги"), KeyboardButton(text="Сдать книги")],
+        [KeyboardButton(text="Отслеживать задолженность")],
+        [KeyboardButton(text="Подарить книгу библиотеке")],
+        [KeyboardButton(text="Меню")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите пункт",
+)
+
+rent_book_for_home = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Студент или сотрудник ТГУ.")],
+        [KeyboardButton(text="Студент или сотрудник ВУЗов Томска.")],
+        [KeyboardButton(text="Сторонний пользователь.")],
+        [KeyboardButton(text="Меню")],
+    ],
+    resize_keyboard=True,
+    input_field_placeholder="Выберите пункт",
 )
 
 # клавиатура для инлайнов
