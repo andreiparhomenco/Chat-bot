@@ -9,12 +9,12 @@ from aiogram.types import Message, CallbackQuery
 import app.keyboards as kb
 
 # из файла миддлваре импортируем нашу функцию тестмидлваре
-from app.middlewares import TestMiddleware
+# from app.middlewares import TestMiddleware
 
 # из класса айограм достали роутер и подставили его вместо диспетчера dp
 router = Router()
 # роутер для обработки мидлваре
-router.message.middleware(TestMiddleware())
+# router.message.middleware(TestMiddleware())
 
 # из айограм импортировали состояния
 from aiogram.fsm.state import StatesGroup, State
