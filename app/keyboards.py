@@ -101,7 +101,10 @@ language_clubs = ReplyKeyboardMarkup(
             KeyboardButton(text="ComPass"),
             KeyboardButton(text="Speak Dating"),
         ],
-        [KeyboardButton(text="Международный клуб игр")],
+        [
+            KeyboardButton(text="Games Club"),
+            KeyboardButton(text="Урду"),
+        ],
         [KeyboardButton(text="Меню")],
     ],
     resize_keyboard=True,

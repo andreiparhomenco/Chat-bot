@@ -393,10 +393,17 @@ async def bengal(message: Message):
 
 
 # Отработка запроса Международный клуб игр
-@router.message(F.text == "Международный клуб игр")
+@router.message(F.text == "Games Club")
 async def international_game_club(message: Message):
     await message.answer(
-        '«Международный клуб игр "Ad hoc". Вы можете поиграть в разные игры на разных языках и даже принести свою. Встреча каждую пятницу в 16.30.\n\nhttps://forms.yandex.ru/u/6735839e02848fc978b93399/'
+        "Встречи Международного клуба игр «Ad hoc» по пятницам в 18.00.\n\nhttps://forms.yandex.ru/u/6735839e02848fc978b93399/"
+    )
+
+
+@router.message(F.text == "Урду")
+async def Urdu(message: Message):
+    await message.answer(
+        "Клуб пакистанской культуры и языка урду Pakistan house проводит встречи по пятницам в 17.00.\n\nhttps://forms.yandex.ru/u/674538ec068ff0cadd51044b/"
     )
 
 
@@ -437,7 +444,7 @@ async def pro_siberia(message: Message):
 @router.message(F.text == "Удаленный доступ")
 async def dostup(message: Message):
     await message.answer(
-        "Удаленный доступ к лицензионным полнотекстовым базам данных и к Электронной библиотеке (репозиторию) ТГУ возможен при наличии читательского билета Научной библиотеки.Настройте прокси-сервер, используя сценарий автоматической настройки, вручную: для Windows 7 https://ez.lib.tsu.ru/Windows7.pdf, для Windows 10 https://ez.lib.tsu.ru/Windows10.pdf.\n\nДалее в разделе «Отечественные и зарубежные ресурсы» https://www.lib.tsu.ru/ru/elektronnye-resursy выберите необходимый ресурс или единую поисковую строку EBSCO Discovery Service. В открывшемся окне в строке «Имя пользователя» введите номер читательского билета и пароль, полученный при записи в библиотеку."
+        "Удаленный доступ к лицензионным полнотекстовым базам данных и к Электронной библиотеке (репозиторию) ТГУ возможен при наличии читательского билета Научной библиотеки. Настройте прокси-сервер, используя сценарий автоматической настройки, вручную:  для Windows 7 https://ez.lib.tsu.ru/Windows7.pdf, для Windows 10 https://ez.lib.tsu.ru/Windows10.pdf.\n\n По ссылке https://www.lib.tsu.ru/ru/elektronnye-resursy выберите необходимый ресурс. Далее в строке «Имя пользователя» введите номер читательского билета и пароль, который вы указали при записи в библиотеку. Для восстановления пароля используйте форму   https://koha.lib.tsu.ru/cgi-bin/koha/opac-password-recovery.pl  или напишите bilet@lib.tsu.ru. \n\n С Электронной библиотекой диссертаций РГБ, справочно-правовым системами КонсультантПлюс и Гарант можно работать только с компьютеров библиотеки."
     )
 
 
